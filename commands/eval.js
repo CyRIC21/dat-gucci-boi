@@ -11,6 +11,7 @@ const { post } = require("snekfetch");
 
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   const code = args.join(" ");
+  const msg = message;
   const token = client.token.split("").join("[^]{0,2}");
   const rev = client.token.split("").reverse().join("[^]{0,2}");
   const filter = new RegExp(`${token}|${rev}`, "g");
